@@ -7,7 +7,13 @@ const homeStore = useHomeStore()
 const { banners, categorys } = storeToRefs(homeStore)
 
 function onItemClick(item: any) {
-  console.log(item)
+  // 使用编程导航(不利于 seo)
+  return navigateTo({
+    path: '/detail',
+    query: {
+      type: item.type
+    }
+  })
 }
 </script>
 

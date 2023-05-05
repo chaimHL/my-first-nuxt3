@@ -13,7 +13,7 @@ withDefaults(defineProps<IProps>(), {
 <template>
   <div>
     <el-row :gutter="20">
-      <el-col :span="8">
+      <el-col v-if="url" :span="8">
         <div class="first-img">
           <img :src="url" alt="" />
         </div>
