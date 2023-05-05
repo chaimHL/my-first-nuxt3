@@ -1,9 +1,14 @@
 import { defineStore } from 'pinia'
 import { getHomeInfo } from '~/service/home'
 import type { HomeInfoType } from '~/service/home'
+interface IHomeState {
+  navbars: any[]
+  banners: any[]
+  categorys: any[]
+}
 
 export const useHomeStore = defineStore('home', {
-  state: () => {
+  state: (): IHomeState => {
     return {
       navbars: [],
       banners: [],
